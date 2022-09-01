@@ -80,7 +80,7 @@ def hi(callback):
 			count = 0
 			with sqlite3.connect("sql6511731.db") as connection:
 			 	   cursor = connection.cursor()
-			 	   cursor.execute("SELECT * FROM botuser;")
+			 	   cursor.execute("SELECT * FROM bitly;")
 			 	   for item in cursor.fetchall():
 			 	   	count = count + 1
 			 	   else:
@@ -91,7 +91,7 @@ def send_to_all(message):
     with sqlite3.connect("sql6511731.db") as connection:
         count = 0
         cursor = connection.cursor()
-        cursor.execute("SELECT * FROM botuser;")
+        cursor.execute("SELECT * FROM bitly;")
         for item in cursor.fetchall():
             users_id = item
             try:
